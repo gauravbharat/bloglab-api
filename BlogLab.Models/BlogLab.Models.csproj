@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Account\" />
+    <None Remove="Blog\" />
+    <None Remove="BlogComment\" />
+    <None Remove="Photo\" />
+    <None Remove="Settings\" />
+    <None Remove="Exception\" />
+    <None Remove="Newtonsoft.Json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Account\" />
+    <Folder Include="Blog\" />
+    <Folder Include="BlogComment\" />
+    <Folder Include="Photo\" />
+    <Folder Include="Settings\" />
+    <Folder Include="Exception\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+</Project>
