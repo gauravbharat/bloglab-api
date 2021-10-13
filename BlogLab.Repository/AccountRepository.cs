@@ -13,9 +13,11 @@ namespace BlogLab.Repository
     public class AccountRepository : IAccountRepository
     {
         private readonly IConfiguration _config;
+        private readonly string _connectionString;
 
         public AccountRepository(IConfiguration config) {
-            _config = config;    
+            _config = config;
+            _connectionString = _config.GetConnectionString(GlobalVariables.connectionString);
         }
 
 
@@ -41,7 +43,7 @@ namespace BlogLab.Repository
                 user.PasswordHash
             );
 
-            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_connectionString))
             {
                 await connection.OpenAsync(cancellationToken);
 
@@ -63,7 +65,7 @@ namespace BlogLab.Repository
 
             ApplicationUserIdentity applicationUser;
 
-            using (var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"))) {
+            using (var connection = new SqlConnection(_connectionString)) {
                 await connection.OpenAsync(cancellationToken);
 
                 applicationUser = await connection.QuerySingleOrDefaultAsync<ApplicationUserIdentity>(
