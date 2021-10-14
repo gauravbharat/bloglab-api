@@ -7,10 +7,16 @@
   <ItemGroup>
     <None Remove="CloudinaryDotNet" />
     <None Remove="Microsoft.Extensions.Options" />
+    <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="Microsoft.IdentityModel.Tokens" />
+    <None Remove="Microsoft.IdentityModel.JsonWebTokens" />
+    <None Remove="Microsoft.AspNetCore.Authentication.JwtBearer" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CloudinaryDotNet" Version="1.15.2" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.11" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlogLab.Models\BlogLab.Models.csproj" />
