@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using BlogLab.Models.Settings;
 
 namespace BlogLab
 {
@@ -23,6 +24,7 @@ namespace BlogLab
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.Configure<CloudinaryOptions>(Configuration.GetSection("CloudinaryOptions"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

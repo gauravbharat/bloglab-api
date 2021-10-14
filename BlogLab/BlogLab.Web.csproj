@@ -5,4 +5,9 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'BlogLab' " />
+  <ItemGroup>
+    <ProjectReference Include="..\BlogLab.Models\BlogLab.Models.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
