@@ -6,7 +6,7 @@ namespace BlogLab.Models.Blog
 
         public string Username { get; set; }
 
-        public string ApplicationUserId { get; set; }
+        public int ApplicationUserId { get; set; }
 
         public DateTime PublishDate { get; set; }
 
