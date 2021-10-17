@@ -69,7 +69,7 @@ namespace BlogLab.Repository
                 await connection.OpenAsync(cancellationToken);
 
                 applicationUser = await connection.QuerySingleOrDefaultAsync<ApplicationUserIdentity>(
-                    "Account_GetByUsername", new { NormaizedUsername = normalizedUserName }, commandType: CommandType.StoredProcedure
+                    "Account_GetByUsername", new { NormalizedUsername = normalizedUserName }, commandType: CommandType.StoredProcedure
 
 
                     );
