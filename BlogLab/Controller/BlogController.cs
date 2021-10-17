@@ -61,7 +61,7 @@ namespace BlogLab.Web.Controller
         [HttpGet("{blogId}")]
         public async Task<ActionResult<Blog>> Get(int blogId)
         {
-            var blog = _blogRespository.GetAsync(blogId);
+            var blog = await _blogRespository.GetAsync(blogId);
 
             return Ok(blog);
         }
